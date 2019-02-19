@@ -1,1 +1,11 @@
 theme: jekyll-theme-minimal
+logo: logo.png
+plugins:
+   - jekyll-relative-links
+   - jemoji
+# relative_links:
+#   enabled: true
+#   collections: true
+include:
+  - README.md
+  - LICENSE.md
