@@ -38,7 +38,7 @@ Pour autant je ne crois pas qu'il faille nier l'existence des premières. Nous a
 
 ### Réponse courte
 
-> "Pensez-vous qu'on puisse écrire un programme informatique qui...
+> "Pensez-vous qu'on puisse écrire un programme informatique qui...\
 > -- Oui"
 
 Voilà. Si à cette question, _"est-ce qu'on peut..."_ vous répondez oui sans attendre la fin de la question alors c'est que vous avez la pensée informatique. Bien sûr, j'exagère un peu et parfois, la théorie nous dit : "là ce n'est pas possible" (je vous renvoie à l'[article Wikipédia traitant du problème de l'arrêt][2]). Mais en restreignant les choses, en faisant des hypothèses supplémentaires, le _non_ se tranforme en un _oui_, au moins partiel.
@@ -227,14 +227,21 @@ La pensée informatique c'est cela : faire bien attenion de **toujours** sépare
 2. Le traitement de ses données (pour en produire de nouvelles notamment)
 3. La valorisation, l'utilisation de ce traitement ou des résultats obtenus
 
-Cette séparation est à l'origine de bien des concepts : programmation modulaire, notion de fonction, modèles de développement comme MVC (Modèle Vue Contrôleur) et j'en passe.
+Cette séparation est à l'origine de bien des concepts : programmation modulaire, notion de fonction, modèles de développement comme MVC ([Modèle Vue Contrôleur][4]) et j'en passe.
 
 
 Nous allons nous servir du concept de fonction informatique. Je ne souhaite pas être trop théorique ici, disons qu'une fonction va être un fragment de code qui, si on lui fournit des données (au travers de paramètres), est capable de nous construire et de nous restituer un résultat.
 
-Nous allons aussi nous servir de liste. La liste va nous permettre de stocker les premières chaînes de caractères que nous utiliserons une première fois dans un certain ordre pour dessiner la première moitié de la figure et dans l'ordre inverse pour la seconde moitié. D'autres concepts très puissants nous servirons, le but ici n'est pas d'en avoir une compréhension précise. Ce que nous en faisons peut-être réalisé plus basiquement avec de simples boucles par exemple.
 
-Par exemple cette liste pour le dessin 5x5 serait : 
+Nous allons aussi nous servir de liste. La liste va permettre de stocker les premières chaînes de caractères que nous utiliserons une première fois dans un certain ordre pour dessiner la première moitié de la figure et dans l'ordre inverse pour la seconde moitié. 
+
+D'autres concepts très puissants nous servirons, le but ici n'est pas d'en avoir une compréhension précise. Ce que nous en faisons peut être réalisé plus basiquement avec de simples boucles par exemple. Dans le désordre nommons :
+
+1. Le _slicing_
+2. la méthode `join` pour passer d'une liste de chaînes de caractères à une unique chaîne.
+3. Les chaînes formattées
+
+Un exemple de liste pour le dessin 5x5 serait : 
 
 ```python
 ['OXXXO', 'XOXOX']
@@ -268,7 +275,7 @@ Quelques exemples d'appels :
 ['*....*', '.*..*.', '..**..']
 ```
 
-Dès lors le dessin va consister à agréger, concaténer une première moitié (la liste fournie par cette fonction) avec la même mais prise à l'envers en y intercalant éventuellement la ligne centrale et à imprimer toutes ces lignes. 
+Dès lors le dessin va consister à agréger, concaténer une première moitié (la liste fournie par cette fonction) avec la même mais prise à l'envers en y intercalant éventuellement la ligne centrale puis à imprimer toutes ces lignes. 
 
 Et d'abord la fonction qui produit une liste contenant la ligne centrale ou rien :
 
@@ -327,3 +334,4 @@ Bien sûr enseigner ces différents concepts n'est pas aisé et il est normal po
 [1]:https://openclassrooms.com/fr/courses/4262331-demarrez-votre-projet-avec-python/4263566-creez-votre-premier-script
 [2]:https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_l%27arr%C3%AAt
 [3]:https://docs.python.org/fr/3.5/library/string.html#formatstrings
+[4]:https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur
