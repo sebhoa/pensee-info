@@ -23,6 +23,18 @@ def dessin_2():
     for cpt in range(n):
         print('X' * n)
 
+
+def dessin_3():
+    n = int(input('size : '))
+    mid = n//2
+    for i in range(mid):
+        print('X' * i + 'O' + 'X' * (n - 2*i - 2) + 'O' + 'X' * i)
+    if n % 2:
+        print('X' * (mid) + 'O' + 'X' * (mid))
+        mid = n//2 + 1
+    for i in range(mid, n):
+        print('X' * (n - i - 1) + 'O' + 'X' * (2*i - n) + 'O' + 'X' * (n - i - 1))
+
 def dessin_4(n, croix, rond):
     def moitie(n, croix, rond):
         l = []
@@ -45,16 +57,6 @@ def dessin_4(n, croix, rond):
     print(dessin(n, croix, rond))
 
 
-def dessin_3():
-    n = int(input('size : '))
-    mid = n//2
-    for i in range(mid):
-        print('X' * i + 'O' + 'X' * (n - 2*i - 2) + 'O' + 'X' * i)
-    if n % 2:
-        print('X' * (mid) + 'O' + 'X' * (mid))
-        mid = n//2 + 1
-    for i in range(mid, n):
-        print('X' * (n - i - 1) + 'O' + 'X' * (2*i - n) + 'O' + 'X' * (n - i - 1))
 
 
 
