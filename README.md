@@ -2,7 +2,7 @@
 **où comment reconcilier tout le monde**
 (enfin j'espère)
 
-Cet article parle de pensée informatique. Nous essaierons d'apporter notre réponse à cette question : **qu'est-ce que la pensée informatique ?** Nous en donnerons deux : une courte et une plus longue illustrée par l'histoire de mon premier bébé programme informatique qui devient grand. Nous profiterons de l'occasion pour revenir sur la polémique : les entrées / sorties font-elles partie de la pensée informatique ?
+Cet article tente de donner le point de vue de l'auteur à la  question : **qu'est-ce que la pensée informatique ?** Deux réponses sont faites : une courte, l'autre plus longue illustrée par l'histoire d'un programme informatique qui évolue. Nous profiterons de l'occasion pour revenir sur la polémique : les entrées / sorties font-elles partie de la pensée informatique ?
 
 
 ## L'origine du problème
@@ -31,7 +31,7 @@ Et vous pouvez continuer à chercher : pratiquement dans **tous** les langages d
 
 Alors on se demande mais pourquoi ? Pourquoi avoir supprimé les entrées / sorties des textes officiels de programmation dans l'enseignement ? Je n'ai pas la réponse à cette question. Ce qui est constaté, en classe avec des élèves, pour ma part avec de jeunes étudiants de première année scientifique c'est que quelque soit le langage de programmation la confusion entre les entrées / sorties d'un programme (`input` et `print`) et les entrées / sorties d'une fonction (paramètres d'entrées et le `return`) existe et n'est pas marginale.
 
-Pour autant je ne crois pas qu'il faille nier l'existence des premières. Nous allons montrer dans la suite qu'avoir une pensée informatique ne concerne pas de savoir si oui ou non les entrées / sorties en font partie.
+Pour autant, je ne crois pas qu'il faille nier l'existence des premières. Nous allons montrer dans la suite qu'avoir une pensée informatique ne concerne pas de savoir si oui ou non les entrées / sorties en font partie.
 
 
 ## Qu'est-ce que la pensée informatique ?
@@ -41,7 +41,7 @@ Pour autant je ne crois pas qu'il faille nier l'existence des premières. Nous a
 > "Pensez-vous qu'on puisse écrire un programme informatique qui...\
 > -- Oui"
 
-Voilà. Si à cette question, _"est-ce qu'on peut..."_ vous répondez oui sans attendre la fin de la question alors c'est que vous avez la pensée informatique. Bien sûr, j'exagère un peu et parfois, la théorie nous dit : "là ce n'est pas possible" (je vous renvoie à l'[article Wikipédia traitant du problème de l'arrêt][2]). Mais en restreignant les choses, en faisant des hypothèses supplémentaires, le _non_ se tranforme en un _oui_, au moins partiel.
+Voilà. Si à cette question, _"est-ce qu'on peut..."_ vous répondez oui sans attendre la fin de la question alors c'est que vous avez la pensée informatique. Bien sûr, j'exagère un peu et parfois, la théorie nous dit : "là ce n'est pas possible" (je vous renvoie par exemple à l'[article Wikipédia traitant du problème de l'arrêt][2]). Mais en restreignant les choses, en faisant des hypothèses supplémentaires, le _non_ se tranforme en un _oui_, au moins partiel.
 
 ### Réponse longue ou comment mon `print('Hello world')` va (me faire) grandir
 
@@ -92,7 +92,7 @@ for cpt in range(10):
     print('XXXXXXXXXX')
 ```
 
-Et comme nous suivions quand le prof a parlé de chaînes de caractères, de concaténation etc. alors nous écrirons :
+Et comme nous avons suivi quand le prof a parlé de chaînes de caractères, de concaténation etc. alors nous écrirons :
 
 ```python
 for cpt in range(10):
@@ -110,7 +110,7 @@ for cpt in range(6):
     print('X' * 6)
 ```
 
-Mais quand même nous nous disons : "hmmm si je pouvais sortir un programme qui s'adapte à la volonté de chaque utilisateur ce serait un gain de temps appréciable". Et comme nous avons bien suivi le passage sur la fonction `input` nous pouvons écrire :
+Mais quand même nous nous disons : _"hmmm si je pouvais sortir un programme qui s'adapte à la volonté de chaque utilisateur ce serait un gain de temps appréciable"_. Et comme nous avons bien suivi le passage sur la fonction `input` nous pouvons écrire :
 
 ```python
 size = int(input('Donnez la taille de votre carré : '))
@@ -213,7 +213,7 @@ for i in range(mid, n):
 ```
 
 Avec cette petite explication pour l'instruction `mid = n//2 /+ 1` qu'on voit dans le `if` :
-Si n est impair, par exemple 5 alors 5//2 = 2 est le nuémro de la ligne centrale différente et la deuxième moitié commence à 5//2 + 1. Par contre, si n est pair, par exemple 6, alors 6//2 = 3, la première moitié va de 0 à 2 et la deuxième reprend de 3 à 5. 
+Si n est impair, par exemple 5 alors 5//2 = 2 est le numéro de la ligne centrale différente et la deuxième moitié commence à 5//2 + 1. Par contre, si n est pair, par exemple 6, alors 6//2 = 3, la première moitié va de 0 à 2 et la deuxième reprend de 3 jusqu'à 5. 
 
 Mais celui qui a développé encore plus sa pensée informatique va se rebeller : "non c'est trop bête, j'ai déjà construit les lignes qu'il me faut ! Je **veux** pouvoir les réutiliser."
 
