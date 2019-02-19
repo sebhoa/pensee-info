@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
-logo: logo.png
+logo: /logo.png
 plugins:
    - jekyll-relative-links
    - jemoji
