@@ -38,7 +38,8 @@ Pour autant, je ne crois pas qu'il faille nier l'existence des premières. Nous 
 
 ### Réponse courte
 
-> "Pensez-vous qu'on puisse écrire un programme informatique qui...\
+> "Pensez-vous qu'on puisse écrire un programme informatique qui...
+>
 > -- Oui"
 
 Voilà. Si à cette question, _"est-ce qu'on peut..."_ vous répondez oui sans attendre la fin de la question alors c'est que vous avez la pensée informatique. Bien sûr, j'exagère un peu et parfois, la théorie nous dit : "là ce n'est pas possible" (je vous renvoie par exemple à l'[article Wikipédia traitant du problème de l'arrêt][2]). Mais en restreignant les choses, en faisant des hypothèses supplémentaires, le _non_ se tranforme en un _oui_, au moins partiel.
