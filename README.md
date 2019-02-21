@@ -9,9 +9,13 @@ Cet article tente de donner le point de vue de l'auteur à la  question : **qu'e
 
 Quelqu'un, quelque part, dans un bureau, s'est dit : 
 
-> "_supprimons les entrées / sorties, ce n'est pas de la pensée informatique"_ 
+> _"supprimons les entrées / sorties, ce n'est pas de la pensée informatique"_ 
 
-Ah ?! Pourtant si on tape dans un moteur de recherche "premier programme java", on obtient dans wikibooks :
+Plus exactement, il a été décidé de simplifier les notations de sujet du Baccalauréat pour ne plus faire figurer les initialisations des variables et les _affichages_. L'extrait ci-dessous montre un exemple de cette simplification. A mon avis l'énoncé de gauche est déjà ambigü : s'agit-il de l'algorithme décrivant un programme ou de celui d'une fonction ? La dernière ligne _Sortie Afficher lambda_ est particulièrement maladroite et témoigne de la confusion entre sortie et affichage.
+
+![Extrait sujet Bac 2017](/Figs/sujet_bac_2017.png)
+
+On ne parle donc plus de _print_. Pourtant si on tape dans un moteur de recherche "premier programme java", on obtient dans wikibooks :
 
 ```java
 public class Exemple {
@@ -30,8 +34,9 @@ Extrait du cours [Python de Openclassroom][1] :
 Et vous pouvez continuer à chercher : pratiquement dans **tous** les langages de programmation, le premier programme consiste à afficher par un `print` quelque chose à l'écran.
 
 Alors on se demande mais pourquoi ? Pourquoi avoir supprimé les entrées / sorties des textes officiels de programmation dans l'enseignement ? Je n'ai pas la réponse à cette question. Ce qui est constaté, en classe avec des élèves, pour ma part avec de jeunes étudiants de première année scientifique c'est que quelque soit le langage de programmation la confusion entre les entrées / sorties d'un programme (`input` et `print`) et les entrées / sorties d'une fonction (paramètres d'entrées et le `return`) existe et n'est pas marginale.
+Et c'est probablement l'origine du changement. Il y a eu des maladresses, comme mettre dans la même phrase _sortie_ et _afficher_, ou ne pas clairement dire de quoi on parle (d'un programme ou d'une fonction) quand on décrit un algorithme.
 
-Pour autant, je ne crois pas qu'il faille nier l'existence des premières. Nous allons montrer dans la suite qu'avoir une pensée informatique ne concerne pas de savoir si oui ou non les entrées / sorties en font partie.
+Pour autant, je ne crois pas qu'il faille nier l'existence des entrées / sorties d'un programme. Dans la suite, j'expose mon point de vue : avoir ou développer une pensée informatique va au-delà de cette question des entrées / sorties.
 
 
 ## Qu'est-ce que la pensée informatique ?
@@ -50,7 +55,7 @@ Nous l'avons vu en introduction, en général on commence par écrire notre prem
 
 Cette fonction s'appelle `print`, `println`, `printf` suivant le langage utilisé et à ce stade les choses sont assez floues : _c'est quoi une fonction ?_, _'Hello world' ?_ L'intérêt est surtout de voir le mécanisme de rédaction du code source dans un éditeur et l'utilisation du compilateur ou de l'interprèteur pour exécuter ce code source.
 
-Mais avançons un peu. Et plaçons nous dans un apprentissage avec le langage Python. Nous savons donc que `print('Hello world')` est une instruction, que `print` est une fonction prédéfinie, que `'Hello world'` est une chaîne de caractères, que cette chaîne n'a aucun sens pour Python si ce n'est que c'est une suite de caractères. Qu'il faut encadrer cette chaîne avec un délimiteur (ici l'apostrophe). Que Python sait aussi manipuler des nombres : par exemple `print(2+3)` constitue une instruction valide et le programme résultant affiche 5 à l'écran. Bien. Nous progressons drôlement. Mais pouvons-nous dire, par la connaissance de ces quelques concepts de programmation, que nous avons une pensée informatique ? Non, pas encore.
+Mais avançons un peu. Et plaçons nous dans un apprentissage avec le langage Python. Nous savons donc que `print('Hello world')` est une instruction, que `print` est une fonction prédéfinie, que `'Hello world'` est une chaîne de caractères, que cette chaîne n'a aucun sens pour Python si ce n'est qu'il s'agit d'une suite de caractères quelconques. Qu'il faut encadrer cette chaîne avec un délimiteur (ici l'apostrophe). Que Python sait aussi manipuler des nombres : par exemple `print(2+3)` constitue une instruction valide et le programme résultant affiche 5 à l'écran. Bien. Nous progressons drôlement. Mais pouvons-nous dire, par la connaissance de ces quelques concepts de programmation, que nous avons une pensée informatique ? Non, pas encore.
 
 #### Première étape
 
@@ -84,7 +89,7 @@ print('XXXXXXXXXX')
 print('XXXXXXXXXX')
 ```
 
-Non ?! Si ! Et si ce code vous choque... il vous choque forcément puisque vous n'êtes pas débutant en programmation, mais mettez-vous dans la peau d'un débutant. S'il continue de vous choquer c'est que, probablement vous avez un début de pensée informatique. Car évidemment on ne _copie-colle_ pas 10 fois la même instruction. Pourquoi ? **Parce que la longueur de notre programme ne peut pas dépendre de la taille de la donnée**. Ce qui, en clair, signifie que s'il fallait, sur le même principe, faire le programme qui affiche un carré 1000x1000 on serait bien embêté. On utilise une boucle. Et si on nous donne cet exercice c'est qu'on veut que nous mettions en oeuvre cette connaissance.
+Non ?! Si ! Et si ce code vous choque... il vous choque forcément puisque vous n'êtes pas débutant en programmation, mais mettez-vous dans la peau d'un débutant. S'il continue de vous choquer c'est que, probablement vous avez un début de pensée informatique. Car évidemment on ne _copie-colle_ pas 10 fois la même instruction. Pourquoi ? **Parce que la longueur de notre programme ne peut pas dépendre de la taille de la donnée**. Ce qui, en clair, signifie que s'il fallait, sur le même principe, faire le programme qui affiche un carré 1000x1000 on serait bien embêté. On utilise une boucle. Et cet exercice a pour objectif de nous faire mettre en oeuvre ce concept.
 
 Notre script ressemblera donc plus vraisemblablement à :
 
@@ -102,7 +107,7 @@ for cpt in range(10):
 
 #### Deuxième étape
 
-Nous sommes très fier de notre programme de dessin que nous donnons à Pierre. Qui, tout content, va en parler à Marie, qui vient nous voir : "J'aimerai bien un programme comme celui de Pierre mais je préfèrerais un carré plus petit, disons 6x6, c'est possible ?". Evidemment.
+Nous sommes très fier de notre programme de dessin que nous donnons à Pierre. Qui, tout content, va en parler à Marie, qui vient nous voir : "J'aimerais bien un programme comme celui de Pierre mais je préfèrerais un carré plus petit, disons 6x6, c'est possible ?". Evidemment.
 
 Et là, respectueux de ne pas faire trop attendre Marie, nous nous empressons de _pondre_ le code suivant `dessin_marie.py` :
 
@@ -119,12 +124,12 @@ for cpt in range(size):
     print('X' * size)
 ```
 
-Le passage des cas 10x10 et 6x6 au cas générique c'est de la pensée informatique. 
+Ce que j'appelle la pensée informatique correspond à ce passage de cas précis, 10x10 et 6x6  dans notre exemple, au cas générique. Ci-dessus j'ai bien un **programme** qui aura besoin d'une entrée (_size_) et qui aura pour résultat ou pour action d'écrire quelque part, à l'écran pour simplifier, notre carré de 'X'. 
 
 
 #### Troisième étape
 
-Notre apprentissage de la programmation avance bien (nous avons pris beaucoup de choses notamment que pour deux nombres entiers a et b, a//b donnait la division entière de a par b) et nous avons un nouvel exercice à résoudre : agrémenter notre dessin carré d'une croix (j'ai remplacé les 'X' par des '.' pour plus de lisibilité). Par exemple pour 5x5 :
+Notre apprentissage de la programmation avance bien (nous avons appris beaucoup de choses notamment que pour deux nombres entiers a et b, a//b donnait la division entière de a par b) et nous avons un nouvel exercice à résoudre : agrémenter notre dessin carré d'une croix (j'ai remplacé les 'X' par des '.' pour plus de lisibilité). Par exemple pour 5x5 :
 
 ```
 O...O
@@ -136,7 +141,7 @@ O...O
 
 Les choses se compliquent. On voit bien que le dessin d'une ligne dépend du numréo de cette ligne, on voit bien aussi que certaines lignes se retrouvent. 
 
-Notre pensée informatique va nous permettre de manipuler des instances ie des cas particuliers (5x5, 6x6...) du problème pour décortiquer tout ça et essayer d'obtenir une règle générique de construction (valable quelque soit la taille donnée) :
+Notre pensée informatique va nous permettre de manipuler des instances ie des cas particuliers (5x5, 6x6...) du problème pour décortiquer tout ça et essayer d'obtenir une règle générique de construction (valable quelle que soit la taille donnée) :
 
 1. une ligne semble comporter : des '.' (éventuellement aucun), puis un 'O', puis des '.' (éventuellement aucun), puis un 'O' et enfin le même nombre de '.' qu'au début.
 2. Pour un carré de dimension impaire on voit bien que la ligne centrale est différente mais ce ne sera pas le cas pour un carré de taille paire :
@@ -323,7 +328,7 @@ print(dessin(size, croix, rond))
 
 ## Conclusion
 
-Un programme informatique résoud un problème pour un utilisateur, pour des utilisateurs. Nous ne pouvons pas donner à cet utilisateur une fonction en lui disant : _"voilà il suffit de la lancer dans un interprèteur en lui passant les valeurs de ton choix"_. Un programme aboutit, utilisable, possède des entrées et imprime des résultats. C'est une réalité et ma vision de la pensée informatique que j'ai essayé de donner ici n'entre pas en conflit avec cette réalité.
+Un programme informatique résout un problème pour un utilisateur, pour des utilisateurs. Nous ne pouvons pas donner à cet utilisateur une fonction en lui disant : _"voilà il suffit de la lancer dans un interprèteur en lui passant les valeurs de ton choix"_. Un programme aboutit, utilisable, possède des entrées et imprime des résultats. C'est une réalité et ma vision de la pensée informatique que j'ai essayé de donner ici n'entre pas en conflit avec cette réalité.
 
 Bien sûr enseigner ces différents concepts n'est pas aisé et il est normal pour un débutant de confondre les entrées / sorties d'un programme et les entrées / sorties d'une fonction. Je ne crois pas que la solution consiste à cacher l'existence d'une des deux notions.
 
