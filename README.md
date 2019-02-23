@@ -332,7 +332,7 @@ Un programme informatique résout un problème pour un utilisateur, pour des uti
 
 Bien sûr enseigner ces différents concepts n'est pas aisé et il est normal pour un débutant de confondre les entrées / sorties d'un programme et les entrées / sorties d'une fonction. Je ne crois pas que la solution consiste à cacher l'existence d'une des deux notions.
 
-
+Enfin je terminerai par dire que ma vision de la pensée informatique et ma façon d'aborder l'apprentissage de la programmation n'est pas la seule possible -- on s'en doutait mais c'est mieux de le préciser. Certains préfèrent inciter les apprenants à ne faire que des fonctions, qui retournent des résultats. Pourquoi pas, notamment avec l'arrivée du langage Python sur nombre de calculatrice, l'interface s'y prête ; à condition quand même de parler un peu de la notion de programmes.
 
 
 [//]: # (LINKS)
